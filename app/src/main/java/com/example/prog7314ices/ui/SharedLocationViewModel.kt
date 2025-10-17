@@ -5,9 +5,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class SharedLocationViewModel : ViewModel() {
-    private val _locationKey = MutableLiveData<String>("305605") // Durban by default
+    private val _locationKey = MutableLiveData("305605")   // type inferred as MutableLiveData<String>
     val locationKey: LiveData<String> = _locationKey
+
     fun updateLocationKey(newKey: String?) {
-        if (!newKey.isNullOrBlank()) _locationKey.value = newKey
+        val key = newKey?.trim()
+        if (key.isNullOrEmpty()) return
+        _locationKey.value = requireNotNull(key)            // <- lint is happy: explicitly non-null
     }
 }
