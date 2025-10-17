@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PROG7314 ICEs</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="accuweather">AccuWeather</string>
+
+</resources>
