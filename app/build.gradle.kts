@@ -58,6 +58,10 @@ dependencies {
     implementation("com.google.android.gms:play-services-location:21.3.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.5")
     implementation("androidx.fragment:fragment-ktx:1.8.2")
+    testImplementation("junit:junit:4.13.2")
+    implementation("com.google.code.gson:gson:2.10.1")
+
+
 
 
 
